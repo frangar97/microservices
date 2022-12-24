@@ -134,9 +134,9 @@ func (l *LogEntry) Update() (*mongo.UpdateResult, error) {
 		bson.M{"_id": docId},
 		bson.D{
 			{"$set", bson.D{
-				{"name": l.Name},
-				{"data": l.Data},
-				{"updated_at": time.Now()},
+				{"name", l.Name},
+				{"data", l.Data},
+				{"updated_at", time.Now()},
 			}},
 		},
 	)
