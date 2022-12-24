@@ -49,3 +49,12 @@ services:
       MONGO_INITDB_PASSWORD: password
     volumes:
       - ./db-data/mongo/:/data/db
+
+  loggerservice:
+    build:
+      context: ./loggerservice
+      dockerfile: ./../loggerservice/loggerservice.dockerfile
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1

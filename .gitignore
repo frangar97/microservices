@@ -2,3 +2,4 @@ db-data/
 front-end/
 brokerservice/brokerApp
 authenticationservice/authApp
+loggerservice/loggerApp
